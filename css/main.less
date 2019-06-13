@@ -1892,3 +1892,121 @@ h3{
 
 }
 
+
+
+.news_list{
+
+
+  @media (min-width:1200px){
+    .col_left{
+      -ms-flex: 0 0 39%;
+      flex: 0 0 39%;
+      max-width: 39%;
+    }
+    .col_right{
+      -ms-flex: 0 0 61%;
+      flex: 0 0 61%;
+      max-width: 61%;
+    }
+  }
+
+
+
+  .news_item{
+    margin-bottom: 50px;
+    .date{
+      color: #797979;
+      font-size: 14px;
+      font-style:italic;margin-bottom: 17px;
+    }
+    .news_title{
+      font-size: 16px;
+      color: #000;
+      text-transform: uppercase;    margin-bottom: 5px;
+    }
+    .desc{
+      font-size: 14px;
+      color: #000;margin-bottom: 15px;
+    }
+    .read_more{
+      display: inline-block;
+      color: @blue;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.pagination{
+  .flex();
+  ul{
+    .flex();
+    li{
+      a{
+        &.prev_page{
+          width: 55px;
+          height: 22px;
+          border: 1px solid #191b60;
+          position: relative;
+          display: inline-block;
+          margin-right: 10px;
+          &.disabled{
+            &:before{
+              background: url(../img/arrow1.png);
+            }
+          }
+          &:before{
+            .b_a();
+            .m_a();
+            background: url(../img/arrow.png);
+            width: 22px;
+            height: 10px;
+            .transform(rotate(-180deg));
+          }
+        }
+        &.next_page{
+          position: relative;
+          width: 55px;
+          height: 22px;
+          border: 1px solid #191b60;display: inline-block;
+          &.disabled{
+            &:before{
+              background: url(../img/arrow1.png);
+            }
+          }
+          &:before{
+           .b_a();
+            .m_a();
+            background: url(../img/arrow.png);
+            width: 22px;
+            height: 10px;
+          }
+        }
+      }
+    }
+
+    &.pages{
+      margin-left: 20px;
+      .empty{
+        color: @blue;
+      }
+      a{
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 3px;
+        &:hover, &.active{
+          text-decoration: none;
+          color: @red;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+.page_desc{
+  color: #000000;
+}
