@@ -105,6 +105,29 @@ $(document).ready(function(){
     }
 
 
+    if($(".slick_slider > div").length >4){
+        $('.slick_slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow:1,
+                    }
+                }
+            ]
+        });
+    }
+
+
 
 
 
