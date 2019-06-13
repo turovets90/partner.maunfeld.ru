@@ -81,6 +81,30 @@ $(document).ready(function(){
     }
 
 
+    if($(".sertificates_slider > div").length >4){
+        $('.sertificates_slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            infinite:false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow:1,
+                    }
+                }
+            ]
+        });
+    }
+
+
 
 
 

@@ -551,8 +551,16 @@ body{
 
 
 .partner_menu_container{
+  position: relative;
   &:hover{
     .partner_btn{
+      &:not(.btn_home){
+        +.partner_menu{
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
       &.btn_home{
         +.partner_menu{
           @media (min-width:992px){
@@ -578,6 +586,7 @@ body{
     height: 50px;
     color: #fff;
     text-transform: uppercase;
+
     @media (max-width:575px){
         height: 40px;
     }
@@ -602,7 +611,7 @@ body{
 
     +.partner_menu{
       display: none;
-      margin-top: -50px;
+      //margin-top: -50px;
     }
     &.btn_home{
       @media (min-width:992px){
@@ -621,8 +630,12 @@ body{
     padding: 4px 0;
     position: relative;
     z-index: 2;
+
     @media (max-width:991px){
-      display: none;
+      display: none;position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
     }
     ul{
       li{
@@ -1409,6 +1422,10 @@ footer{
   background: none;
   padding-left: 0;
   margin-bottom: 3px;
+  padding-top: 0;
+  @media (max-width:575px){
+    padding-bottom: 0;
+  }
   
   li{
     padding-right: 10px;
@@ -1439,6 +1456,9 @@ footer{
       font-size: 14px;
       text-decoration: underline;
       display: inline-block;
+      @media (max-width:575px){
+        font-size: 14px;
+      }
       &:hover, &:focus{
         text-decoration: none;
         color: @red;
@@ -1665,6 +1685,7 @@ strong{
 
 
 .content{
+  padding-top: 20px;
   padding-bottom: 100px;
   @media (max-width:1200px){
     padding-bottom: 80px;
@@ -1695,3 +1716,179 @@ strong{
   }
 
 }
+
+
+.user_menu_block{
+  background: @blue;
+  padding: 5px 0;
+  @media (max-width:767px){
+      margin-bottom: 30px;
+  }
+  .user_menu{
+    li{
+      .flex();
+      border-top: 2px solid #fff;
+      &:last-child{
+        border-bottom: 2px solid #fff;
+      }
+      &.active{
+        a{
+          text-decoration: none;
+          background: #DCDCDC;
+          color: @blue;
+        }
+      }
+      a{
+        .flex();
+        .j-center();
+        .ai-center();
+        background: @blue;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        min-height: 70px;
+        @media (max-width:767px){
+            min-height: 50px;
+        }
+        @media (max-width:575px){
+          min-height: 30px;
+        }
+        &:hover, &:focus{
+          text-decoration: none;
+          background: #DCDCDC;
+          color: @blue;
+        }
+      }
+    }
+  }
+}
+
+
+
+.current_amount{
+  background: #EFEFEF;
+  padding:13px 25px;
+  .flex();
+  .ai-center();
+  max-width: 465px;
+  margin-bottom: 30px;
+  .current_amount_text{
+    width: 65%;
+    strong{
+      color: #363636;
+      font-size: 14px;
+      display: block;
+    }
+    span{
+      color: #7d7d7d;
+      display: block;
+      font-size: 14px;
+    }
+  }
+  .points{
+    width: 35%;
+    text-align: right;
+    font-size: 18px;
+    color: #363636;
+    font-weight: bold;
+  }
+}
+
+
+h3{
+  color: #3e3e3e;
+  font-size: 22px;
+  margin-top: 44px;
+  margin-bottom: 25px;
+}
+
+
+
+.sertificates_list{
+
+  > div{
+    text-align: center;
+  }
+
+  .item{
+    display: inline-block;
+    picture{
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .item_footer{
+      .flex();
+      .j-beetween();
+
+      .points{
+        *{
+          white-space: nowrap;
+        }
+        span{
+          color: #808080;
+          font-size: 15px;
+          display: block;
+        }
+        strong{
+          display: block;
+          font-size: 15px;
+          color: #1e1e1e;
+        }
+      }
+    }
+
+  }
+
+  .add_to_cart{
+    display: inline-block;
+    width: 128px;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background: @blue;
+    text-decoration: none;
+    max
+    &:hover, &:focus{
+      text-decoration: none;
+      background: #CFCFCF;
+    }
+  }
+}
+
+
+.sertificates_slider{
+  padding: 0 30px;
+  .slick-arrow{
+    width: 18px;
+    height: 32px;
+    &.slick-disabled{
+      opacity: 0.5;
+    }
+    &:before{
+      .b_a();
+      .m_a();
+      background: url(../img/right-arrow.png);
+      width: 18px;
+      height: 32px;
+      opacity: 1;
+    }
+  }
+
+
+  .slick-prev{
+    left: 0;
+    .transform(rotate(-180deg));
+  }
+
+
+  .slick-next{
+    right: 0;
+  }
+
+}
+
