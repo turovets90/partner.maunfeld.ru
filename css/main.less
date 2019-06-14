@@ -1,3 +1,4 @@
+@import "intlTelInput";
 @import "fancybox";
 @import "slick-less";
 //@import "select2";
@@ -1710,6 +1711,7 @@ strong{
   height: 45px;
   width: 100%;
   max-width: 240px;
+  border:0;
   &:hover, &:focus{
     background: @red;
     color: #fff;
@@ -2105,4 +2107,74 @@ z-index: 2;
   }
 
 
+}
+
+
+
+.personal_data{
+  .resonal_data_form{
+    h3{
+      color: #7d7d7d;
+      font-size: 18px;    margin-bottom: 13px;
+      margin-top: 20px;
+    }
+
+
+    label{
+      color: #313131;
+      font-size: 14px;
+      display: block;    margin-bottom: 4px;
+    }
+
+    .input_group{
+      margin-bottom: 25px;
+    }
+
+    .field{
+      margin-bottom: 12px;
+    }
+
+
+    .intl-tel-input .selected-flag .iti-arrow{
+      background: url(../img/flag_arrow.png);
+      width: 8px;
+      height: 4px;
+      border:0;
+    }
+
+    .intl-tel-input{
+      width: 100%;
+      .selected-flag{
+        border-right:1px solid #DEDEE1;
+        width: 60px;
+        .j-center();
+      }
+      &.allow-dropdown input{
+        padding-left: 72px;
+      }
+    }
+    input, .form-control{
+      width: 100%;
+      height: 34px;
+      padding: 6px 10px;
+      line-height: 1;
+      background-color: #f5f5f8;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      box-shadow: inset 0 3px 4px rgba(0,0,0,.075);
+      font-size: 14px;
+      color: #424242;
+      &:focus{
+        border-color: #191b60;
+      }
+    }
+
+  }
+}
+
+
+.mw-435{
+  max-width: 435px;
 }

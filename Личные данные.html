@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Личный кабинет</title>
+    <title>Личные данные</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -107,8 +107,8 @@
             <div class="user_menu_block">
               <ul class="user_menu">
                 <li><a href="#">История заказов</a></li>
-                <li class="active"><a href="#">Личный счёт</a></li>
-                <li><a href="#">Личные данные</a></li>
+                <li><a href="#">Личный счёт</a></li>
+                <li class="active"><a href="#">Личные данные</a></li>
                 <li><a href="#">История зачисления бонусов</a></li>
               </ul>
             </div>
@@ -116,69 +116,54 @@
           <div class="col-12 col-sm-12 col-md-8 col-xl-9">
             <ul class="breadcrumb">
               <li><a href="#">Главная</a></li>
-              <li><a href="#">Личный кабинет</a></li>
+              <li><a href="#">Личные данные</a></li>
             </ul>
-            <h1>Личный счёт</h1>
-            <div class="current_amount">
-              <div class="current_amount_text"><strong>Текущая сумма на счету</strong><span>По состоянию на 29.05.2019</span></div>
-              <div class="points">500 баллов</div>
-            </div>
-            <h3>Выберите сертификат</h3>
-            <div class="row sertificates_list sertificates_slider">
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
+            <h1>Личные данные</h1>
+            <div class="personal_data mw-435">
+              <form class="resonal_data_form">
+                <h3>Данные о компании</h3>
+                <div class="row input_group">
+                  <div class="col-12 field">
+                    <label>Наименование компании (ООО, ИП)</label>
+                    <input class="form-control" type="text" value="ООО “Самая важная компания”"/>
+                  </div>
+                  <div class="col-12 field">
+                    <label>ИНН</label>
+                    <input class="form-control" type="text" value="6449013711"/>
+                  </div>
+                  <div class="col-12 field">
+                    <label>ФИО</label>
+                    <input class="form-control" type="text" value="Пясновцев Олег Викторович"/>
+                  </div>
+                  <div class="col-12 field">
+                    <label>Город</label>
+                    <input class="form-control" type="text" value="Москва"/>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
+                <h3>Контактные данные</h3>
+                <div class="row input_group">
+                  <div class="col-12 field">
+                    <label>E-mail</label>
+                    <input class="form-control" type="text" value="emalwsdfeter@gmail.com"/>
+                  </div>
+                  <div class="col-12 field">
+                    <label>Телефон</label>
+                    <input class="form-control" type="tel" id="phone" name="phone" value="+7 (495) 111-22-33"/>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
+                <h3>Пароль</h3>
+                <div class="row input_group">
+                  <div class="col-12 field">
+                    <label>Новый пароль</label>
+                    <input class="form-control" type="password"/>
+                  </div>
+                  <div class="col-12 field">
+                    <label>Повторите пароль</label>
+                    <input class="form-control" type="password"/>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                <div class="item">
-                  <picture><img src="img/_2967-668.png"/></picture>
-                  <div class="item_footer">
-                    <div class="points"><span>Цена</span><strong>300 баллов</strong></div>
-                    <div><a class="add_to_cart" href="#">Купить</a></div>
-                  </div>
-                </div>
-              </div>
+                <button class="btn_blue">Сохранить</button>
+              </form>
             </div>
           </div>
         </div>
