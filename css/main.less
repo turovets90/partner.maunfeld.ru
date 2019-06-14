@@ -2283,6 +2283,15 @@ z-index: 2;
   min-height: 100%;
   position: relative;
 
+  @media (max-width:767px){
+    height: 575px;
+    min-height: 575px;
+  }
+
+  .container{
+    max-width: 1300px;
+  }
+
 
 
   .main_screen_desc{
@@ -2366,7 +2375,9 @@ html{
     background: #fff;
     .box-shadow(0 0 120.52px 10.48px rgba(0, 0, 0, 0.27));
     max-width: 655px;
-  margin-top: -410px;
+    @media (min-width:768px){
+      margin-top: -410px;
+    }
     @media (max-width:1200px){
       max-width: 100%;
     }
