@@ -130,30 +130,37 @@ $(document).ready(function(){
 
 
     var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        // allowDropdown: false,
-        // autoHideDialCode: false,
-        // autoPlaceholder: "off",
-        // dropdownContainer: document.body,
-        // excludeCountries: ["us"],
-        // formatOnDisplay: false,
-        // geoIpLookup: function(callback) {
-        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-        //     var countryCode = (resp && resp.country) ? resp.country : "";
-        //     callback(countryCode);
-        //   });
-        // },
-        // hiddenInput: "full_number",
-        // initialCountry: "auto",
-        // localizedCountries: { 'de': 'Deutschland' },
-        // nationalMode: false,
-        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-        // placeholderNumberType: "MOBILE",
-        // preferredCountries: ['cn', 'jp'],
-        // separateDialCode: true,
-        utilsScript: "/js/utils.js",
-    });
+    var input1 = document.querySelector("#phone1");
+    if(input){
+        window.intlTelInput(input, {
+            utilsScript: "/js/utils.js",
+        });
+    }
 
+    if(input1){
+        window.intlTelInput(input1, {
+            utilsScript: "/js/utils.js",
+        });
+    }
+
+
+
+
+
+    $(window).resize(function(){
+        var landing_header = $('.landing_header');
+        var landing_header_height = $('.landing_header').outerHeight();
+        if(landing_header){
+            $(window).scroll(function(){
+                if ($(window).scrollTop() > landing_header_height) {
+                    $(landing_header).addClass('fixed');
+                } else {
+                    $(landing_header).removeClass('fixed');
+                }
+            });
+        }
+    });
+    $(window).resize();
 
 
 
