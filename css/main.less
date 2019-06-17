@@ -652,11 +652,14 @@ body{
           text-align: center;
           text-decoration: none;
           padding: 50px 10px;
+          background: @blue;
+
           @media (max-width:991px){
             padding: 20px 10px;
           }
           &:hover, &:focus{
             text-decoration: none;
+           background: @red;
           }
           .icon{
             margin-bottom: 13px;
@@ -1407,6 +1410,9 @@ footer{
         height: 30px;
         background: @blue;
         .border-radius(50%);
+        &:hover, &:focus{
+          background: @red;
+        }
         img{
           position: absolute;
           .m_a();
@@ -1451,6 +1457,12 @@ footer{
       a{
         text-decoration: none;
       }
+    }
+    span{
+      color: #444444;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
     }
     a{
       color: #444444;
@@ -2280,7 +2292,7 @@ z-index: 2;
   background-position: center;
   width: 100%;
   height: 100%;
-  min-height: 100%;
+  min-height:930px;
   position: relative;
 
   @media (max-width:767px){
@@ -2298,10 +2310,12 @@ z-index: 2;
     max-width: 490px;
     text-align: center;
     margin-top: 180px;
+    @media (max-width:1200px){
+      background: rgba(255, 255, 255, 0.8); padding: 15px;
+    }
     @media (max-width:767px){
       margin-top: 150px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.8);
+
     }
     h1{
       color: #000;
