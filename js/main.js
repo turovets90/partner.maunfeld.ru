@@ -22,6 +22,11 @@ $(document).ready(function(){
                 $("html").removeClass('page-noscroll');
                 $('.hamburger').removeClass('act');
             }
+
+            if (!$(e.target).closest(".partner_menu_container").length) {
+                $(".partner_menu").slideUp();
+            }
+
             e.stopPropagation();
         });
     }
